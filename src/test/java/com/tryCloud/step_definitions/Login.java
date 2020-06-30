@@ -21,6 +21,11 @@ public class Login {
         new LoginPage().login(ConfigurationReader.get("username"),ConfigurationReader.get("password"));
     }
 
+    @When("the user logs in with the  invalid credentals")
+    public void the_user_logs_in_with_the_invalid_credentals() {
+        new LoginPage().login("invalid_username", "invalid_password");
+    }
+
     @Then("the user should see the title as {string}")
     public void the_user_should_see_the_title_as(String expectedTitle) {
         String actualTitle = Driver.get().getTitle();
