@@ -38,15 +38,9 @@ public WebElement logout;
 @FindBy(xpath = "//li[@data-id='help']")
 public WebElement help;
 
-
-
     public BasePage() {
         PageFactory.initElements(Driver.get(), this);
     }
-
-
-
-
 
 //    public void logOut(){
 //        BrowserUtils.waitFor(2);
@@ -67,11 +61,9 @@ public WebElement help;
 
     public void navigateToModule(String module) {
         String locator= "(//a[@aria-label='"+module+"'])[1]";
-
         Driver.get().findElement(By.xpath(locator)).click();
         String expectedTitle = module + " - Trycloud";
         Assert.assertEquals("verify title",expectedTitle,Driver.get().getTitle() );
-
     }
 
 }
