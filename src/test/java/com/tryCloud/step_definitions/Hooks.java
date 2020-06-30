@@ -1,5 +1,6 @@
 package com.tryCloud.step_definitions;
 
+import com.tryCloud.utilities.BrowserUtils;
 import com.tryCloud.utilities.DBUtils;
 import com.tryCloud.utilities.Driver;
 import io.cucumber.java.After;
@@ -14,7 +15,6 @@ public class Hooks {
 
     @Before
     public void setUp(){
-        System.out.println("\tthis is coming from BEFORE");
         Driver.get().manage().window().maximize();
         Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
@@ -26,7 +26,7 @@ public class Hooks {
             final byte[] screenshot = ((TakesScreenshot) Driver.get()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot,"image/png","screenshot");
         }
-
+        BrowserUtils.waitFor(2);
         Driver.closeDriver();
     }
 
