@@ -3,6 +3,7 @@ package com.tryCloud.pages;
 import com.tryCloud.utilities.BrowserUtils;
 import com.tryCloud.utilities.Driver;
 import io.cucumber.java.en_lol.WEN;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -68,6 +69,9 @@ public WebElement help;
         String locator= "(//a[@aria-label='"+module+"'])[1]";
 
         Driver.get().findElement(By.xpath(locator)).click();
+        String expectedTitle = module + " - Trycloud";
+        Assert.assertEquals("verify title",expectedTitle,Driver.get().getTitle() );
+
     }
 
 }
