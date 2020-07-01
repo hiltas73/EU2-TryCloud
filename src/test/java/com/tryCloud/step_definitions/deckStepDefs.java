@@ -3,10 +3,9 @@ package com.tryCloud.step_definitions;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class deckStepDefs {\@When("the user click on the Create New Board")
+public class deckStepDefs {@When("the user click on the Create New Board")
 public void the_user_click_on_the_Create_New_Board() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
+
 }
 
     @When("enter the Board name as {string}")
