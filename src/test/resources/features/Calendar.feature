@@ -20,7 +20,11 @@ Feature: Calendar Functions
 
 
   Scenario: Add new event
-
+  When the user click on the Week on the Calendar Name
+    Then the user click any one column
+    And the user write "meeting" as a Title of the Event and select text "caner" from dropdown
+    Given the user write starts datetime "07/03/2020" "20:00 AM" ends "07/03/2020" "23:59 AM"
+    And the user click on the create button
 
 
 
