@@ -1,5 +1,6 @@
 package com.tryCloud.pages;
 
+
 import com.tryCloud.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,8 +10,16 @@ public class DeckPage extends BasePage {
     public DeckPage(){
         PageFactory.initElements(Driver.get(),this);
     }
-    @FindBy(xpath = "//tr[@class='board-create ng-scope']")
-    public WebElement creatingBoard;
+
+    @FindBy(css = ".icon.icon-add")
+    public WebElement addNewBoard;
+
+    @FindBy(xpath = "//input[@placeholder='New board title']")
+    public WebElement newBoardTitleInputBox;
+
+    @FindBy(xpath = "//span[@title='Create board']")
+    public WebElement createBoardCheckIcon;
+
 
 
 }
