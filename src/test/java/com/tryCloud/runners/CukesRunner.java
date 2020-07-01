@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         glue = "com/tryCloud/step_definitions",
 
         dryRun = false,
-        tags = "@calendar"
+        tags = "@deck"
 
 
         )
