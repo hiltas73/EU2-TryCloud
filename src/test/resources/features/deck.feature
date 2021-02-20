@@ -2,7 +2,7 @@ Feature: Deck page
 
   Background:
     Given the user is in Login page
-    And the user logs in with the  valid credentals
+    And the user logs in with the  valid credentials
     And the user navigates to "Deck" page
   ​
   @createBoard

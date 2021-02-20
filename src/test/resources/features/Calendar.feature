@@ -3,7 +3,7 @@ Feature: Calendar Functions
 
   Background:
     Given the user is in Login page
-    And the user logs in with the  valid credentals
+    And the user logs in with the  valid credentials
     And the user should see the title as "Files - Trycloud"
     And the user navigates to "Calendar" page
 
